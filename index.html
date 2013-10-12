@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+<head>
+	<title>Rwanda News</title>
+</head>
+<body>
+	<div id="articles"></div>
+
+	<script id="tpl-article" type="text/x-template">
+		<% _.each(articles, function(article) { %>
+			<h2><%= article.title %></h2>
+			<div><%= article.description %></div>
+		<% }) %>
+	</script>
+
+	<script src="js/jquery.js"></script>
+	<script src="js/underscore.js"></script>
+	<script src="js/app.js"></script>
+</body>
+<html>
