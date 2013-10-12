@@ -1,27 +1,79 @@
-<!doctype html>
-<html>
-<head>
-	<title>Rwanda News</title>
-</head>
-<body>
-	<div id="articles"></div>
-	<div id="article"></div>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+<meta http-equiv="Content-Type" content="text/html;
+charset=UTF-8" />
+<title>RNA</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+<link rel="shortcut icon" href="images/favicon.ico" />
+	</head>
+	<body>
+		<div id="main">
+			<div class="container">
+				<div id="header">
+					<ul id="menu">
+						<li><a href="">Home</a></li>
+						<li><a href="">Services</a></li>
+						<li><a href="">About</a></li>
 
-	<script id="tpl-articles" type="text/x-template">
-		<% _.each(articles, function(article) { %>
-			<h2><a href="#<%= article.id %>"><%= article.title %></a></h2>
-			<div><%= article.description %></div>
-		<% }) %>
-	</script>
+					</ul>
+					<div id="logo">
+						<h1>RNA</h1>
+						<small>Get all news</small>
+					</div>
+				</div>
+				<div id="block_content">
+					<div id="block_portfolio">
+						<div id="portfolio_items">
 
-	<script id="tpl-article" type="text/x-template">
-		<div><a href="">&lt; list</a></div>
-		<h1><%= article.title %></h1>
-		<div><%= article.content %></div>
-	</script>
+							<div id="articles"></div>
+							<div id="article"></div>
 
-	<script src="js/jquery.js"></script>
-	<script src="js/underscore.js"></script>
-	<script src="js/app.js"></script>
-</body>
+						</div>
+						<div id="text_column">
+
+							Ads
+
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<div id="footer">
+			<div class="container">
+			Footer Stuff Goes in Here
+			</div>
+		</div>
+
+		<script id="tpl-articles" type="text/x-template">
+			<% _.each(articles, function(article) { %>
+				<div class="mini_portfolio_item">
+					<div class="block_inside">
+						<img src="<%= article.image %>"
+						class="thumbnail" alt="" />
+						<h3><a href="#<%= article.id %>"><%= article.title %></a></h3>
+						<p><%= article.description %></p>
+					</div>
+				</div>
+			<% }) %>
+		</script>
+
+		<script id="tpl-article" type="text/x-template">
+			<div><a href="">&lt; list</a></div>
+			<div class="news_content">
+				<div class="block_inside_text">
+					<img src="<%= article.image %>"
+					class="thumbnail" alt="" />
+					<h3><%= article.title %></h3>
+					<p><%= article.content %></p>
+				</div>
+			</div>
+		</script>
+
+		<script src="js/jquery.js"></script>
+		<script src="js/underscore.js"></script>
+		<script src="js/app.js"></script>
+	</body>
 </html>
