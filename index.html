@@ -9,12 +9,13 @@
 
 	<script id="tpl-articles" type="text/x-template">
 		<% _.each(articles, function(article) { %>
-			<h2><%= article.title %></h2>
+			<h2><a href="#<%= article.id %>"><%= article.title %></a></h2>
 			<div><%= article.description %></div>
 		<% }) %>
 	</script>
 
 	<script id="tpl-article" type="text/x-template">
+		<div><a href="">&lt; list</a></div>
 		<h1><%= article.title %></h1>
 		<div><%= article.content %></div>
 	</script>
@@ -23,4 +24,4 @@
 	<script src="js/underscore.js"></script>
 	<script src="js/app.js"></script>
 </body>
-<html>
+</html>
