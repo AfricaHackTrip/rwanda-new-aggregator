@@ -5,12 +5,18 @@
 </head>
 <body>
 	<div id="articles"></div>
+	<div id="article"></div>
 
-	<script id="tpl-article" type="text/x-template">
+	<script id="tpl-articles" type="text/x-template">
 		<% _.each(articles, function(article) { %>
 			<h2><%= article.title %></h2>
 			<div><%= article.description %></div>
 		<% }) %>
+	</script>
+
+	<script id="tpl-article" type="text/x-template">
+		<h1><%= article.title %></h1>
+		<div><%= article.content %></div>
 	</script>
 
 	<script src="js/jquery.js"></script>
